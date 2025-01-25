@@ -33,63 +33,8 @@ The project integrates advanced machine learning components like LLMs, embedding
 6. **Performance Tracking**:
    - Stores past test results in a MySQL database.
    - Visualizes trends with interactive Plotly charts.
-
----
-
-## Installation
-
-### Prerequisites
-- Python 3.9+
-- MySQL server
-- API key for Groq API (used for LLMs).
-
-### Setup Instructions
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-repo/rag-test-application.git
-   cd rag-test-application
-   ```
-
-2. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Set Up Environment Variables**:
-   - Create a `.env` file in the root directory.
-   - Add the following:
-     ```env
-     GROQ_API_KEY=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
-     ```
-
-4. **Configure MySQL Database**:
-   - Create a MySQL database named `test`.
-   - Import the schema:
-     ```sql
-     CREATE TABLE test_results (
-         id INT AUTO_INCREMENT PRIMARY KEY,
-         test_name VARCHAR(255),
-         percentage FLOAT,
-         correct INT,
-         wrong INT,
-         date_of_test DATE
-     );
-     ```
-   - Update MySQL credentials in the code:
-     ```python
-     my_db = mysql.connector.connect(
-         host="localhost",
-         user="root",
-         passwd="naruto",
-         database="test"
-     )
-     ```
-
-5. **Run the Application**:
-   ```bash
-   streamlit run app.py
-   ```
+7. **Identifying Weakness And Strengths Of The User**
+   - Using the test results of teh user to identify their strengths and weaknesses
 
 ---
 
@@ -136,6 +81,9 @@ The project integrates advanced machine learning components like LLMs, embedding
 
 5. **View Past Test Analysis**:
    - Review past test results and track performance trends.
+  
+6. **Identifying Weakness And Strengths Of The User**
+   - Using the test results of teh user to identify their strengths and weaknesses
 
 ---
 
@@ -148,7 +96,10 @@ The project integrates advanced machine learning components like LLMs, embedding
    - Uses CrewAI agents for domain-specific analysis and strategy generation.
 
 3. **Data-Driven Insights**:
-   - Stores and analyzes user performance data to deliver targeted feedback and learning strategies.
+   - Stores and analyzes user performance data to deliver targeted feedback and learning strategies.\
+
+4. **Identifying Weakness And Strengths Of The User**
+   - Using the test results of teh user to identify their strengths and weaknesses
 
 ---
 
