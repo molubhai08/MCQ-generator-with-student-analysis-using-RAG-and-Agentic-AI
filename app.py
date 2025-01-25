@@ -17,8 +17,8 @@ import os
 import plotly.express as px
 
 # Initialize LLM and database connection
-os.environ['GROQ_API_KEY'] = "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"
-llm = ChatGroq(groq_api_key="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", model="llama3-70b-8192")
+os.environ['GROQ_API_KEY'] = ""
+llm = ChatGroq(groq_api_key="", model="llama3-70b-8192")
 embedder = OllamaEmbeddings(model="nomic-embed-text")
 my_db = mysql.connector.connect(host="localhost", user='root', passwd="naruto", database='test')
 mycursor = my_db.cursor()
